@@ -30,16 +30,7 @@ const colors = [
   "#deeed6",
 ];
 
-// const hardcodedColors = [
-//   "#140c1c",
-//   "#30346d",
-//   "#854c30",
-//   "#d04648",
-//   "#597dce",
-//   "#8595a1",
-//   "#d2aa99",
-//   "#dad45e",
-// ];
+
 
 const size = 256;
 // place(x, y) := place[x + y * size]
@@ -90,8 +81,12 @@ wss.on("connection", function connection(ws) {
 
 server.on("upgrade", (req, socket, head) => {
   const url = new URL(req.url, req.headers.origin);
-  console.log(url);
+  let apiKey = url.searchParams.get('apiKey');
+  console.log(url, apiKey);
+  if(apiKeys.has(apiKey)) {
   wss.handleUpgrade(req, socket, head, (ws) => {
     wss.emit("connection", ws, req);
-  });
+  });} else {
+    socket.destroy()
+  }
 });

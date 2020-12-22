@@ -36,7 +36,7 @@
 
 + 8. Удали из обработчика клика на поле отрисовку пикселя. Для этого сделай так, чтобы при `broadcast`-е текущему клиенту тоже отправлялось сообщение. А затем сделай так, чтобы отрисовка пикселя происходила только при получении клиентом сообщения из `WebSocket`. После этого сервер будет полностью контролировать целостность поля для рисования
 
-9. Опубликуй своё приложение на [Heroku](https://id.heroku.com/login). Для этого потребуются `heroku-cli`, и `git`, если чего-то нет, пройди [вот эти шаги](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up).
++ 9. Опубликуй своё приложение на [Heroku](https://id.heroku.com/login). Для этого потребуются `heroku-cli`, и `git`, если чего-то нет, пройди [вот эти шаги](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up).
 
 - Авторизируйся в Heroku: `heroku login`
 - Создай новое приложение в `Heroku`: `heroku create`
