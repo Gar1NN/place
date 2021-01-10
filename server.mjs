@@ -33,7 +33,6 @@ const colors = [
 
 
 const size = 256;
-// place(x, y) := place[x + y * size]
 const place = Array(size * size).fill(null);
 for (const [colorIndex, colorValue] of colors.entries()) {
   for (let dx = 0; dx < size; dx++) {
